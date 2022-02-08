@@ -5,10 +5,7 @@
   $enroll_number = $_POST['enroll_number'];
   $date_of_admission = $_POST['date_of_admission'];
 
-  // Create connection
-  $conn = new mysqli('localhost', 'root','', 'e_classe_db');
-
-  // Check connection
+  include("connect.php");
   if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
   }else{
